@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+	<title>KayVee</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}" />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+	<header class="my-6 max-w-6xl mx-auto">
+		<h1 class="text-2xl font-medium">Documents</h1>
+	</header>
+	<main class="max-w-6xl mx-auto">
+		<div class="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+			{% for key in store.keys() %}
+			<a href="/{{key}}" class="rounded flex flex-col gap-2 shadow transition-all hover:shadow-xl">
+				<h2 class="py-1 px-3 text-xs font-medium bg-gray-100 rounded-t">
+					{{ key | title }}
+				</h2>
+				<span class="pb-1 px-3 font-mono">{{ store.get(key) }}</span>
+			</a>
+			{% endfor %}
+		</div>
+	</main>
+</body>

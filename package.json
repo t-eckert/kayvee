@@ -1,0 +1,20 @@
+{
+  "name": "kayvee",
+  "version": "0.1.0",
+  "description": "NPM module for compiling TailwindCSS.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./tailwind.css -o ./kayvee/static/app.css",
+    "watch": "npx tailwindcss -i ./tailwind.css -o ./kayvee/static/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-eckert/kayvee.git"
+  },
+  "author": "Thomas Eckert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t-eckert/kayvee/issues"
+  },
+  "homepage": "https://github.com/t-eckert/kayvee#readme"
+}
